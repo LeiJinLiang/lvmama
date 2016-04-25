@@ -114,12 +114,17 @@ EventUtil.addHandler(weekend,'click',function (e) {
     fadeOut(show_holiday,10,100);
     fadeIn(show_week,10,100);
     show_holiday.style.display='none';
+    weekend.className='tab_style';
+    holiday.className=[];
 });
 EventUtil.addHandler(holiday,'click', function (e) {
     show_week.style.display='none';
     show_week.classList=[];
     fadeOut(show_week,10,100);
     fadeIn(show_holiday,10,100);
+    holiday.className='tab_style';
+    weekend.classList=[];
+
 });
 //广告位上下轮播小动画
 window.onload= function () {
@@ -201,6 +206,8 @@ window.onload= function () {
 }
 
 //完全加载动画
+
+
 EventUtil.addHandler(window,'load',function(){
     var ele=document.getElementsByClassName('fenlei1')[0];
     ele=ele.childNodes[1].children;
@@ -213,3 +220,36 @@ EventUtil.addHandler(window,'load',function(){
         imgAll[j][0].className='img';
     }
 });
+
+//swiper
+Swipe(document.getElementById('mySwipe'), {
+    startSlide: 0,//起始幻灯片
+    speed: 400,//滑动时长
+    auto: 3000,//滑动间隔
+    continuous: true//是否连续滑动
+});
+//lazyload
+var grid_week = document.getElementById('show_week');
+var grid_holiday=document.getElementById('show_holiday');
+EventUtil.addHandler(grid_week,'scroll', function () {
+   console.log('--scroll--');
+    var lazyGrid = AnimOnScroll(grid_week, {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.1,
+        effect: 'effect-1'
+    });
+});
+EventUtil.addHandler(grid_holiday,'scroll', function () {
+    console.log('----scroll holiday-');
+    var lazyGrid = AnimOnScroll(grid_holiday, {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.1,
+        effect: 'effect-1'
+    });
+});
+
+
+
+

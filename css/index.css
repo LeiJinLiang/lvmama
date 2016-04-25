@@ -168,12 +168,17 @@ section .toutiao .scroll-bar ul li p{ white-space: nowrap; text-overflow: ellips
 .more .plate ul{ overflow: hidden;}
 .more .plate ul li{ width: 33.33%; height: 50px; float: left; border-top-width: 1px; border-right-width: 1px;}
 .more .plate ul li:nth-child(3n){ border-right-width: 0;}
-.hidden{display: none}
-
-
-
-
-
+.hidden,.count{display: none}
+#show_week,#show_holiday{
+	overflow: scroll;
+	height: 420px;
+	margin-top: 40px;
+}
+.tab_style{
+	border-bottom: 2px solid #bd14c8;
+	-webkit-transition: border-bottom 0.3s linear,color 0.3s linear;
+	color: red;
+}
 
 
 

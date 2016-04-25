@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="http://pic.lvmama.com/img/mobile/touch/img/lvmama_v1_png.png"/>
     <link rel="apple-touch-icon" sizes="144x144" href="http://pic.lvmama.com/img/mobile/touch/img/lvmama_v1_png.png"/>
     <link rel="stylesheet" href="http://pic.lvmama.com/mobile/css/v7/static/global.css?v=20150319">
+    <link rel="stylesheet" href="js/plugins/lazyLoad/1.0/code.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -32,21 +33,21 @@
             </div>
         </div>
         <div class="banner">
-            <div class="swiper-main">
-                <div class="swiper-container swiper-container1">
+            <div class="swiper-main" >
+                <div class="swiper-container swiper-container1" id="mySwipe">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="">
+                            <a href="javascript;">
                                 <div class="img-wrap"><img src="img/banner.jpg" alt=""></div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="">
+                            <a href="javascript;">
                                 <div class="img-wrap"><img src="img/banner.jpg" alt=""></div>
                             </a>
                         </div>
                         <div class="swiper-slide" >
-                            <a href="">
+                            <a href="javascript;">
                                 <div class="img-wrap"><img src="img/banner.jpg" alt=""></div>
                             </a>
                         </div>
@@ -183,7 +184,7 @@
         <div class="tablist bd">
             <nav>
                 <ul class="tab-title">
-                    <li id="weekend"><span>度周末</span></li>
+                    <li id="weekend" class="tab_style"><span>度周末</span></li>
                     <li id="holiday"><span>度长假</span></li>
                 </ul>
             </nav>
@@ -192,7 +193,7 @@
                     <a href="">
                         <div class="pro-module bd">
                             <div class="img-wrap">
-                                <img src="img/prd1.jpg" alt="">
+                                <img src="img/prd1.jpg" alt="" data-lazy-url="img/prd1.jpg">
                             </div>
                             <div class="msg">
                                 <div class="summary">
@@ -206,7 +207,7 @@
                     <a href="">
                         <div class="pro-module bd">
                             <div class="img-wrap">
-                                <img src="img/prd2.jpg" alt="">
+                                <img src="img/prd2.jpg" alt="" data-lazy-url="img/prd2.jpg">
                             </div>
                             <div class="msg">
                                 <div class="summary">
@@ -222,7 +223,7 @@
                     <a href="">
                         <div class="pro-module bd">
                             <div class="img-wrap">
-                                <img src="img/prd1.jpg" alt="">
+                                <img src="img/prd1.jpg" alt="" data-lazy-url="img/prd1.jpg">
                             </div>
                             <div class="msg">
                                 <div class="summary">
@@ -236,7 +237,7 @@
                     <a href="">
                         <div class="pro-module bd">
                             <div class="img-wrap">
-                                <img src="img/prd2.jpg" alt="">
+                                <img src="img/prd2.jpg" alt="" data-lazy-url="img/prd2.jpg">
                             </div>
                             <div class="msg">
                                 <div class="summary">
@@ -267,6 +268,8 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="js/plugins/swipe/1.0/build.min.js"></script>
+    <script type="text/javascript" src="js/plugins/lazyLoad/1.0/build.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
